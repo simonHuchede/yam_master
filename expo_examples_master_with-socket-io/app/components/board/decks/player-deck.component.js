@@ -99,6 +99,7 @@ const styles = StyleSheet.create({
     rollInfoText: {
         fontSize: 14,
         fontStyle: "italic",
+        color: "rgba(255, 255, 255, 0.8)"
     },
     diceContainer: {
         flexDirection: "row",

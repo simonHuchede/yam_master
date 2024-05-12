@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
         opacity: 0.9,
     },
     canBeCheckedCell: {
-        backgroundColor: "lightyellow",
+        backgroundColor: "rgba(255, 255, 224, 0.25)",
     },
     topBorder: {
         borderTopWidth: 1,
