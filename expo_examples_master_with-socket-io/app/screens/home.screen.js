@@ -1,24 +1,49 @@
-import { StyleSheet, View, Button } from "react-native";
+import { StyleSheet, View, ImageBackground } from "react-native";
+import { Button } from "react-native-paper";
+import { commonStyles } from '../../styles/common';
+
 export default function HomeScreen({ navigation }) {
-    return (
-        <View style={styles.container}>
-            <View>
-                <Button
-                    title="Jouer en ligne"
-                    onPress={() => navigation.navigate('OnlineGameScreen')}
-                />
-            </View>
-            <View>
-                <Button
-                    title="Jouer contre le bot"
-                    onPress={() => navigation.navigate('VsBotGameScreen')}
-                />
-            </View>
+  return (
+    <View style={styles.container}>
+      <ImageBackground
+        source={require("../../assets/home.jpeg")}
+        style={styles.image}
+        resizeMode="cover"
+      >
+        <View style={commonStyles.buttonContainer}>
+          <Button
+            mode="contained"
+            onPress={() => navigation.navigate("OnlineGameScreen")}
+            style={commonStyles.button}
+          >
+            Jouer en ligne
+          </Button>
         </View>
-    ); }
-const styles = StyleSheet.create({ container: {
-        flex: 1,
-        backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center",
-    } });
+        <View style={commonStyles.buttonContainer}>
+          <Button
+            mode="contained"
+            onPress={() => navigation.navigate("VsBotGameScreen")}
+            style={commonStyles.button}
+          >
+            Jouer contre le bot
+          </Button>
+        </View>
+      </ImageBackground>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  image: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+    height: "100%"
+  },
+});

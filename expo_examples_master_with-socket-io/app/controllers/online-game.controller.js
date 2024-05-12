@@ -3,6 +3,7 @@ import {StyleSheet, Text, View} from "react-native";
 import {SocketContext} from '../contexts/socket.context';
 import Board from "../components/board/board.component";
 import Recap from "../components/recap/recap.component";
+import { ActivityIndicator } from "react-native-paper";
 
 export default function OnlineGameController({navigation}) {
     const socket = useContext(SocketContext);
@@ -53,6 +54,7 @@ export default function OnlineGameController({navigation}) {
             )}
             {inQueue && (
                 <>
+                <ActivityIndicator animating={true} />
                     <Text style={styles.paragraph}>
                         Waiting for another player...
                     </Text> </>
