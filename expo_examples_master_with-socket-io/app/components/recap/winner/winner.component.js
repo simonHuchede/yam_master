@@ -10,7 +10,6 @@ const Winner = ({ navigation }) => {
     const [playerWinner, setPlayerWinner] = useState(false);
     const quitGame = () => {
         socket.emit("game.delete");
-        socket.emit("disconnect");
         navigation('HomeScreen');
     }
     useEffect(() => {

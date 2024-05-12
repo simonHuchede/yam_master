@@ -429,7 +429,7 @@ const GameService = {
         },
         findGameIndexBySocketId: (games, socketId) => {
             for (let i = 0; i < games.length; i++) {
-                if (games[i].player1Socket.id === socketId || games[i].player2Socket.id === socketId) {
+                if (games[i]?.player1Socket.id === socketId || games[i]?.player2Socket.id === socketId) {
                     return i; // Retourne l'index du jeu si le socket est trouvé
                 }
             }
