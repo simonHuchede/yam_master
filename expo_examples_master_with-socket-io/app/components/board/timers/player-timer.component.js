@@ -12,7 +12,7 @@ const PlayerTimer = () => {
     }, []);
     return (
         <View style={styles.playerTimerContainer}>
-            <Text>Timer: {playerTimer}</Text>
+            <Text>Temps: {playerTimer}</Text>
         </View>
     );
 };

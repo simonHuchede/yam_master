@@ -49,14 +49,14 @@ export default function OnlineGameController({navigation}) {
             {!inQueue && !inGame && !inRecap && (
                 <>
                     <Text style={styles.paragraph}>
-                        Waiting for server datas...
+                    En attente du serveur...
                     </Text> </>
             )}
             {inQueue && (
                 <>
                 <ActivityIndicator animating={true} />
                     <Text style={styles.paragraph}>
-                        Waiting for another player...
+                        En attente d'un adversaire...
                     </Text> </>
             )}
             {inGame && (

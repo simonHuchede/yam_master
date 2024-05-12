@@ -12,14 +12,14 @@ import OpponentScore from "./scores/opponent-score.component";
 
 const OpponentInfos = () => { return (
     <View style={styles.opponentInfosContainer}>
-        <Text>Opponent infos</Text>
+        <Text style={styles.text}>Informations sur l'adversaire</Text>
     </View>
 );
 };
 
 const PlayerInfos = () => { return (
     <View style={styles.playerInfosContainer}>
-        <Text>Player Infos</Text>
+        <Text style={styles.text}>Informations sur le joueur</Text>
     </View>
 ); };
 
@@ -37,7 +37,7 @@ const Board = ({ gameViewState}) => {
         <View style={[styles.row, { height: '25%' }]}>
             <OpponentDeck />
         </View>
-        <View style={[styles.row, { height: '40%' }]}>
+        <View style={[styles.row, styles.gridChoicesContainer, { height: '40%' }]}>
             <Grid />
             <Choices />
         </View>
@@ -61,11 +61,15 @@ const styles = StyleSheet.create({ container: {
         alignItems: 'center',
         width: '100%',
         height: '100%',
+        borderColor: 'black',
     }, row: {
         flexDirection: 'row',
         width: '100%',
         borderBottomWidth: 1,
         borderColor: 'black',
+    },
+    gridChoicesContainer: {
+        
     },
     opponentInfosContainer: {
         flex: 7,
@@ -73,7 +77,7 @@ const styles = StyleSheet.create({ container: {
         alignItems: 'center',
         borderRightWidth: 1,
         borderColor: 'black',
-        backgroundColor: "lightgrey"
+        backgroundColor: "#7a5857"
     },
     opponentTimerScoreContainer: {
         flex: 3,
@@ -88,7 +92,7 @@ playerInfosContainer: {
         alignItems: 'center',
         borderRightWidth: 1,
         borderColor: 'black',
-        backgroundColor: "lightgrey"
+        backgroundColor: "#00342a",
 },
 playerTimerScoreContainer: {
     flex: 3,
@@ -97,6 +101,9 @@ playerTimerScoreContainer: {
         alignItems: 'center',
         backgroundColor: "lightgrey"
 },
+text: {
+    color: "white"
+}
 
  });
 export default Board;
