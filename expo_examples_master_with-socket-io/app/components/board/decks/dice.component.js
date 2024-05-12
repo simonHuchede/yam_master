@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     lockedDice: {
-        backgroundColor: "gray",
+        backgroundColor: "rgba(173, 216, 230, 0.5)",
     },
     diceText: {
         fontSize: 20,

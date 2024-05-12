@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         borderBottomWidth: 1,
         borderColor: "black",
-        backgroundColor: "lightgrey"
+        backgroundColor: "rgba(0, 0, 0, 0.5)"
     },
     choiceButton: {
         backgroundColor: "white",

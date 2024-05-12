@@ -74,10 +74,12 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         borderWidth: 1,
-        borderColor: "black",
+        borderColor: "rgba(255, 255, 255, 0.5)",
+        backgroundColor: "rgba(0, 0, 0, 0.5)"
     },
     cellText: {
         fontSize: 11,
+        color: "white"
     },
     playerOwnedCell: {
         backgroundColor: "lightgreen",
